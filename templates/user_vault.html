@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <script src="./static/js/color-modes.js"></script>
+
+        <title></title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+        <link href="./static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+           span{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:xx-large;
+            color: rgb(244, 245, 249);
+           }
+           
+          
+                 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                .bg {
+                  /* The image used */
+                  /* background-image: url("https://images.hdqwalls.com/download/blue-abstract-sharp-flows-4k-vn-1920x1080.jpg");                  */
+                  background-color: #2234ae;
+                  background-image: linear-gradient(315deg, #162582 0%, #191714 74%);
+                  
+                 min-height: 100vh;
+                  text-shadow: 2px 2px 2px rgba(0, 0, 0,.2);
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-attachment: fixed; 
+                  
+                
+                  
+                }
+              }
+
+          
+          .box{
+             
+              color: white;
+              align-items: center;
+              box-shadow: 10px 20px 30px rgba(161, 164, 180, 0.831) ;
+              background: inherit;
+              backdrop-filter: blur(6px);
+              padding: 20px 20px 20px 20px;
+              width: 70%;
+              
+              border-radius: 7px;
+            }
+            
+            h1{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+            }
+            th{
+              font-size:30px;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            td{
+              font-size: 20px;
+            }
+            
+            .btn {
+                background-color: DodgerBlue; /* Blue background */
+                border: none; /* Remove borders */
+                color: white; /* White text */
+                padding: 12px 16px; /* Some padding */
+                font-size: 16px; /* Set a font size */
+                cursor: pointer; /* Mouse pointer on hover */
+              }
+
+              /* Darker background on mouse-over */
+            .btn:hover {
+                background-color: RoyalBlue;
+              }
+
+              .btndel{
+                border-radius: 5px;
+                background-color: rgb(204, 22, 43); /* Blue background */
+                border: none; /* Remove borders */
+                color: white; /* White text */
+                padding: 12px 16px; /* Some padding */
+                font-size: 16px; /* Set a font size */
+                cursor: pointer; /* Mouse pointer on hover */
+              }
+              .btndel:hover{
+                background-color: rgb(134, 11, 11);
+              }
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+          </style>
+      
+          
+          <!-- Custom styles for this template -->
+          <link href="./static/css/sign-in.css" rel="stylesheet">
+        
+    </head>
+    <body align="center" valign="middle">
+      <div class="bg">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="fs-4"><H1><B>&nbsp;&nbsp;PERSONAL VAULT <hr></B></H1></span>
+           </a> 
+          <ul class="nav nav-pills">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <li class="nav-item"><a href="/" style="color: white;" class="nav-link" >Home</a></li>
+            <li class="nav-item"><a href="/strength_checker" style="color: white;"  class="nav-link">Strength Checker</a></li>
+            <li class="nav-item"><a href="/passwordGenerator" style="color: white;"  class="nav-link">Password Generator</a></li>
+            <li class="nav-item"><a href="/pwned" style="color: white;"  class="nav-link">Pwned ?</a></li>
+            
+          </ul>
+        </header>
+       
+   
+        <form action="/vault/save" method="POST", enctype="multipart/form-data">
+          
+            <table  align="center" class="box"   width="100%">
+              
+              <thead>
+                <tr>
+                  <th>WEBSITE<br><hr></th>
+                  <th>USERNAME<br><hr></th>
+                  <th>PASSWORD<br><hr></th>
+                </tr>
+              </thead>
+                {% for item in dataset %}
+                <tr>
+                  <td>{{item[1]}}</td>
+                  <td>{{item[2]}}</td>
+                  <td>{{item[3]}}</td>
+                  <td><a href="/update/{{user}}/{{item[0]}}" class="btn"><i class="fa fa-edit"></i></a></td>
+                  <td><a href="/delete/{{user}}/{{item[0]}}" class="btndel"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                {% endfor %}
+                
+            </table>
+         
+       </form><br><br><br>
+       <div class="container">
+        <table style="width: 1000px; ">
+          <tr>
+            
+            <td align="right"><button style="width: 200px; height: 50px;font-size: 20px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/loggedin/{{user}}'">Back</button>
+              <br></td>
+              <td align="right"><button style="width: 200px; height: 50px;font-size: 20px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/logout'">Logout</button>
+                <br></td>
+          </tr>
+        </table>
+       
+        
+       <br><br><br><br>
+         <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p style="color: white;">created by : DIYA MALAM</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="/learn" style="color: white;"  >Learn more</a></li>
+            
+          </ul>
+        </footer>
+     </div> 
+      
+      <script src="./static/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      
+    </body>
+</html>

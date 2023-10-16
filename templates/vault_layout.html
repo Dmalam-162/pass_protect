@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./static/js/color-modes.js"></script>
+
+        <title></title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+        <link href="./static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        
+        <style>
+          
+           .bg {
+                  /* The image used */
+                  background-image: url("https://images.hdqwalls.com/download/blue-abstract-sharp-flows-4k-vn-1920x1080.jpg");
+                 
+                 height: 900px;
+                 
+                  
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                 
+                  
+                }
+              
+            
+            .box{
+              align-items: center;
+              background-image: linear-gradient(to bottom right, rgb(71, 111, 151), rgb(232, 235, 236));
+              box-shadow: 10px 10px 10px 10px rgba(24, 66, 108, 0.739) ;
+              background: inherit;
+              backdrop-filter: blur(7px);
+              padding: 20px 20px 20px 20px;
+              width: 800px;
+              height: 450px;
+              border: 4px solid rgb(9, 65, 133);
+              border-radius: 7px;
+             
+            }
+            hr{
+              color: white;
+            }
+            input{
+              font-size: 2em;
+            }
+            td{
+              min-width: 300px;
+            }
+            span{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:xx-large;
+            color: rgb(252, 252, 255);
+           }
+            h1{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                
+            }
+            hr{
+              color: white;
+            }
+            h4{
+                
+                font-family: 'Times New Roman', Times, serif;
+                color: white;
+                font-size: 2em;
+            }
+            label{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                font-size: 1em;
+
+            }
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+          </style>
+      
+          
+          <!-- Custom styles for this template -->
+          <!-- <link href="./static/css/sign-in.css" rel="stylesheet"> -->
+        
+    </head>
+    <body>
+      
+      <div class="bg">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <span class="fs-4"><H3><B>PERSONAL VAULT</B><HR></H3></span>
+               </a> 
+              <ul class="nav nav-pills">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                <li class="nav-item"><a href="#" style="color: white;" class="nav-link" >Home</a></li>
+                <li class="nav-item"><a href="/strength_checker" style="color: white;"  class="nav-link">Strength Checker</a></li>
+                <li class="nav-item"><a href="/passwordGenerator" style="color: white;"  class="nav-link">Password Generator</a></li>
+                <li class="nav-item"><a href="/pwned" style="color: white;"  class="nav-link">Pwned ?</a></li>
+                                
+              </ul>
+            </header>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+            <div class="container">
+                <form action="/vault/save/{{user}}" method="POST", enctype="multipart/form-data">
+                    <h3 style="color:white"><center>{{user}}  , Welcome to <em>PASS-PROTECT</em>&nbsp;&nbsp;!</center>
+                    <br><hr><h3>
+                      <!-- {% if 'username' in session %}
+                      Welcome, {{ session['username'] }}!
+                      {% else %}
+                      Please log in to access the dashboard.
+                      
+                      {% endif %} -->
+                <table align="center" class="box">
+                        <tr><td colspan="2" style="color: white;">&nbsp;&nbsp;Enter details to save ...<hr></td></tr>
+                          <tr>
+                    <tr>
+                        <td align="right">
+                            <label class="form-check-label" for="flexCheckDefault">WEBSITE &nbsp;&nbsp;:  </label>
+                        </td>
+                       
+                        <td>
+                          <input type="text"  style="width: 350px;" placeholder=".com" required class="form-control" name="web" value="{{request.form['web']}}">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right">
+                            <label class="form-check-label" for="flexCheckDefault">USERNAME &nbsp;&nbsp;: </label>
+
+                        </td>
+                        <td>
+                          <input type="text"  style="width: 350px;"  placeholder="enter username" required class="form-control"  name="usr" value="{{request.form['usr']}}">
+
+                  </td>
+                </tr>
+                
+                <tr>
+                    <td align="right">
+                        <label class="form-check-label" for="flexCheckDefault">PASSWORD &nbsp;&nbsp;:  </label>
+                        
+                    </td>
+                    <td>
+                      <input type="password"  style="width: 350px;"  placeholder="password" required class="form-control"  name="pwd" value="{{request.form['pwd']}}">
+                      
+                  </td>
+                </tr>
+
+                <tr><td colspan="2"><hr></td></tr>
+                
+                <tr>
+                    <td  align="center">
+                        <button style="width: 200px; height: 60px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/vault/view/{{user}}'">VIEW SAVED</button>
+                        <br>
+                    </td>
+                    <td  align="center">
+                      <button style="width: 200px; height: 60px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/vault/save/{{user}}'">SAVE</button>
+                      <br>
+                  </td>
+                </tr>
+            </table>
+            </form><br>
+            <div class="container" align="right">
+               <button style="width: 200px; height: 60px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/logout'">Logout</button>
+                      <br></div>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <p style="color:white; font-size: small;">created by : DIYA MALAM</p>
+              
+                  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32"></svg>
+                  </a>
+              
+                  <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="" style="color:white; font-size: small;" >Learn more</a></li>
+                    
+                  </ul>
+                </footer>
+              </div>
+        </div>
+    </body>
+</html>

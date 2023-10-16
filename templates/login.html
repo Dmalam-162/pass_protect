@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <script src="./static/js/color-modes.js"></script>
+
+        <title></title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+        <link href="./static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   
+        <style>
+          
+          body, html {
+                  height: 100%;
+                       }
+                 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                .bg {
+                  /* The image used */
+                  background-image: url("https://images.hdqwalls.com/download/blue-abstract-sharp-flows-4k-vn-1920x1080.jpg");
+                 
+                  /* Full height */
+                  height: 100%;
+                  
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  
+                }
+              }
+              form{
+                
+                background-image: linear-gradient(to bottom right, rgb(71, 111, 151), rgb(232, 235, 236));
+                box-shadow: 10px 10px 10px 10px rgba(24, 66, 108, 0.739) ;
+                background: inherit;
+                backdrop-filter: blur(1px);
+                padding: 20px 20px 20px 20px; 
+                width: 480px;
+                height: 450px;
+                border-radius: 7px;
+                border: 4px solid rgb(9, 65, 133);
+                
+                
+              }
+
+              a{
+                  text-decoration: none;
+                  color: #cfd5da;
+                  font-size: larger;
+                  
+                }
+
+                .underline{
+                  position: relative;
+                }
+
+                .underline::before{
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  width: 0;
+                  height: 4px;
+                  background-color: #0074D9;
+                  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                }
+                @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+                @media (hover: hover) and (pointer: fine) {
+                  .underline:hover::before{
+                    left: 0;
+                    right: auto;
+                    width: 100%;
+                  }
+                }
+
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+          </style>
+      
+          
+          <!-- Custom styles for this template -->
+          <link href="./static/css/sign-in.css" rel="stylesheet">
+        
+    </head>
+    <body align="center">
+      <div class="bg"> 
+         <div class="sign">
+            <main align="center" class="form-signin  m-auto"><br><br>
+              <form align="center" action="/loggedin" method="POST", enctype="multipart/form-data" >
+              
+                <h2 style="color: white;"><i>Please login to continue...</i> </h2><hr>
+            
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Name"  required name="user_name" value="{{request.form['user_name']}}" ">
+                  <label for="floatingInput">UserName</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required name="user_pwd" value="{{request.form['user_pwd']}}" ">
+                  <label for="floatingPassword">Password</label>
+                </div>
+               
+                <br>
+                <button style="font-size: large;" class="btn btn-primary w-100 py-2" type="submit">LOG IN</button><br><br><br>
+                
+                  <label align="left" style="color: white;">Not a member ?</label><br>
+                  <a href="/vault" class="underline"><u>create your account here</u></a>
+             
+                
+              </form>
+              <script>
+                history.pushState(null, null, document.URL);
+                window.addEventListener('popstate', function () {
+                    history.pushState(null, null, document.URL);
+                });
+            </script>
+             </main>
+             <br><br>
+              <div align="left" class="container"><button style="width: 200px; height: 50px;font-size: 20px;" class = "btn btn-primary " type="submit" onclick="window.location.href='/'">Back</button>
+                <br></div>
+        </div> 
+      </div>
+      <script src="./static/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      
+    </body>
+</html>

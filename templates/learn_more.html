@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <script src="./static/js/color-modes.js"></script>
+
+        <title></title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+        <link href="./static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   
+        <style>
+           span{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:xx-large;
+            color: rgb(244, 245, 249);
+           }
+            
+           body, html {
+                  height: 100%;
+                       }
+                 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                .bg {
+                  /* The image used */
+                  background-image: url("https://images.hdqwalls.com/download/blue-abstract-sharp-flows-4k-vn-1920x1080.jpg");                 
+                  /* Full height */
+                  height: 1959px;
+                  text-shadow: 2px 2px 2px rgba(0, 0, 0,.2);
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                
+                  
+                }
+              }
+
+            h4{
+                font-family: Garamond, serif;
+              }
+            hr{
+              color:white;
+            }
+            h1{
+              font-family:'Times New Roman', Times, serif;color: #eaebf2;
+            }
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+          </style>
+      
+          
+          <!-- Custom styles for this template -->
+          <link href="./static/css/sign-in.css" rel="stylesheet">
+        
+    </head>
+    <body align="center" valign="middle">
+      <div class="bg">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="fs-4"><H1><B>&nbsp;&nbsp;LEARN MORE </B></H1></span>
+           </a> 
+          <ul class="nav nav-pills">&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <li class="nav-item"><a href="/" style="color: white;" class="nav-link" >Home</a></li>
+            <li class="nav-item"><a href="/passwordGenerator" style="color: white;"  class="nav-link">Password Generator</a></li>
+            <li class="nav-item"><a href="/strength_checker" style="color: white;"  class="nav-link">Strength Checker</a></li>
+            <li class="nav-item"><a href="/vault" style="color: white;"  class="nav-link">Personal Vault</a></li>
+            <li class="nav-item"><a href="/pwned" style="color: white;"  class="nav-link">Pwned ?</a></li>
+
+            
+          </ul>
+        </header>
+       
+         <div class="container" style="color: white;">
+          <h1 align="left">Why password security is important ?<hr> </h1>
+          <h4>
+            Passwords remain an effective solution for identity-based access control of digital assets when considering cost, security benefits, and ease of use and management.<br>
+
+            The average user manages more passwords than ever. Password security systems are used not just to protect data but also to verify and establish identity for personalized features and account access. Stolen credentials are commonly used by cyberattackers to deliver malware. For this reason, it's important to adopt password security best practices .
+          </h4>
+          <br><br>
+          <h1 align="left">Best practices for password security<hr> </h1>
+          <h4>
+            <ol>
+              <li>Change passwords frequently.</li>
+              <li>Safely store passwords.</li>
+              <li>Create long, complex passwords.</li>
+              <li>Use biometric passwords.</li>
+            </ol>
+          </h4>
+          <br><br>
+          <h1 align="left">What does "pwned" mean?<hr> </h1>
+          <h4>
+            The word "pwned" has origins in video game culture and is a leetspeak derivation of the word "owned", due to the proximity of the "o" and "p" keys. It's typically used to imply that someone has been controlled or compromised, for example "I was pwned in the Adobe data breach". 
+
+          </h4>
+          <br><br>
+          <h1 align="left">How To Create Secure Passwords<hr> </h1>
+          <h4>
+            <ol>
+              <li> A password should be 16 characters or more.</li>
+              <li>A password should include a combination of letters, numbers, and characters.</li>
+              <li>A password shouldn't be shared with any other account
+                .</li>
+              <li>A password shouldn't include any of the user's personal information like their address or phone number. It's also best not to include any information that can be accessed on social media like kid's or pet's names..</li>
+              <li>A password shouldn't contain any consecutive letters or numbers.</li>
+              <li>A password shouldn't be the word “password” or the same letter or number repeated.</li>
+            </ol>
+          </h4>
+          <br><br>
+          <h1 align="left">How do hackers get passwords from data breaches?<hr> </h1>
+          <h4>
+            Hackers target sites with vulnerable security practices (such as storing plain text passwords) and steal the account data of thousands or even millions of users at once. This can include login credentials, credit card details, and Social Security numbers (SSNs).<br>
+            Hackers then advertise the stolen “data dumps” on illicit marketplaces and forums on the Dark Web.<br>
+            Other hackers or identity thieves can purchase and use the information for financial gain.
+
+          </h4>
+
+          <br><br>
+          <h1 align="left">How to protect yourself against fake password reset emails:<hr> </h1>
+          <h4>
+            <ol>
+             <li><b>Avoid clicking on links.</b>Bogus links may install malware on your computer or lead you to an unsecured website. <br>
+             </li> 
+            <li><b>Check for signs of potential fraud.</b> Look out for design flaws, misspelled words, and incorrect grammar. <br>
+            </li> 
+            <li><b>Verify that the sender's email address is real.</b>Hover your cursor over the sender's name to reveal the email address. If the address differs from the name, it's probably a scam.
+            </li>  
+            </ol>
+            
+             <br>
+          </h4>
+         </div>
+      
+        
+       <br><br><br><br>
+        <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p style="color: white;"  >created by : DIYA MALAM</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+      
+          
+        </footer>
+     </div>
+      
+      <script src="./static/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      
+    </body>
+</html>
